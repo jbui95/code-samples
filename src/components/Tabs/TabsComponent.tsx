@@ -15,13 +15,18 @@ export const TabsComponent = ({ tabs }: TabsProps): JSX.Element => {
       <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
         <Tabs value={value} onChange={handleChange}>
           {tabs.map((tab) => {
-            return <Tab label={tab.label} />;
+            return <Tab label={tab.label} key={tab.label} />;
           })}
         </Tabs>
       </Box>
       {tabs.map((tab, index) => {
         return (
-          <TabContent value={value} index={index} label={tab.label}>
+          <TabContent
+            value={value}
+            index={index}
+            label={tab.label}
+            key={tab.label}
+          >
             {tab.body}
           </TabContent>
         );
