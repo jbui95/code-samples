@@ -1,10 +1,11 @@
+import { Box } from "@mui/material";
 import "./App.css";
-import { TabsComponent } from "./components";
+import { ContactForm, TabsComponent } from "./components";
 
 const tabs = [
   {
-    label: "Tab 1",
-    body: <div>Tab 1 Content</div>,
+    label: "Contact Form",
+    body: <ContactForm />,
   },
 ];
 
@@ -12,7 +13,7 @@ function App() {
   return (
     <div className="App">
       <h1>Hey there, code enthusiasts! 🚀 </h1>
-      <p>
+      <p style={{ margin: "0 10%", textAlign: "center" }}>
         Ready to dip your toes into the exciting world of React, TypeScript, and
         MUI (Material-UI)? 🚀 We've got just the ticket for you! Welcome to our
         beginner-friendly React code samples extravaganza! 🎉 These bite-sized
@@ -25,7 +26,16 @@ function App() {
         let's dive headfirst into the wonderful world of React, TypeScript, and
         MUI goodness! 🌈✨
       </p>
-      <TabsComponent tabs={tabs} />
+      <Box
+        sx={{
+          margin: 5,
+          border: "1px solid black",
+          padding: 2,
+          borderRadius: 5,
+        }}
+      >
+        <TabsComponent tabs={tabs} />
+      </Box>
     </div>
   );
 }
