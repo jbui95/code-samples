@@ -5,7 +5,7 @@ export const FormContainer = styled(Box)({
   flexDirection: "column",
   alignItems: "center",
   justifyContent: "center",
-  width: "25%",
+  width: "40%",
   margin: "20px",
   border: "1px solid black",
   borderRadius: 10,
