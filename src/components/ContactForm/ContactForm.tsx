@@ -54,6 +54,21 @@ export const ContactForm = (): JSX.Element => {
                 </>
               )}
             </Field>
+            <Field name="message">
+              {({ input, meta }) => (
+                <>
+                  <TextFieldStyled
+                    required
+                    id="message"
+                    label="Message"
+                    multiline
+                    rows={4}
+                    {...input}
+                  />
+                  {meta.touched && meta.error && <span>{meta.error}</span>}
+                </>
+              )}
+            </Field>
             <ButtonContainer>
               <Button
                 variant="outlined"
